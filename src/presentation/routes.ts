@@ -1,4 +1,6 @@
 import { Router } from 'express';
+import { UserRoutes } from './user/route';
+import { TransferRoutes } from './transfer/route';
 
 
 
@@ -10,10 +12,8 @@ export class AppRoutes {
 
     const router = Router();
     
-    // Definir las rutas
-    // router.use('/api/todos', /*TodoRoutes.routes */ );
-
-
+    router.use('/api/v1/users', UserRoutes.routes);
+    router.use('/api/v1/transfers', TransferRoutes.routes);
 
     return router;
   }
