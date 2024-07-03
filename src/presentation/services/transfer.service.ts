@@ -61,7 +61,5 @@ export class TransferService {
       throw CustomError.internalServer('Internal Server Error')
     }
   }
-
-  
   
 }
